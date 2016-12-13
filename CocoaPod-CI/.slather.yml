@@ -1,0 +1,6 @@
+coverage_service: coveralls
+workspace: Example/<POD_NAME>.xcworkspace
+xcodeproj: Example/<POD_NAME>.xcodeproj
+scheme: <POD_NAME>-Example
+source_directory: <POD_NAME>/Classes
+binary_basename: <POD_NAME>
