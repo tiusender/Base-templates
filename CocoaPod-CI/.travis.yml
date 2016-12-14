@@ -5,7 +5,7 @@ before_install:
 - gem install slather
 
 script:
-- set -o pipefail && xcodebuild build test -workspace Example/JVToolkit.xcworkspace -scheme JVToolkit-Example -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=10.0,name=iPhone 6' -enableCodeCoverage YES VALID_ARCHS=x86_64 ONLY_ACTIVE_ARCH=YES CODE_SIGNING_REQUIRED=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | xcpretty 
+- set -o pipefail && xcodebuild build test -workspace Example/<POD_NAME>.xcworkspace -scheme <POD_NAME>-Example -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=10.0,name=iPhone 6' -enableCodeCoverage YES VALID_ARCHS=x86_64 ONLY_ACTIVE_ARCH=YES CODE_SIGNING_REQUIRED=NO GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES | xcpretty 
 - pod lib lint --quick --allow-warnings 
 
 after_success:
